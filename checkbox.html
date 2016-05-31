@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <link rel="stylesheet" href="checkbox.css" media="screen" title="no title" charset="utf-8">
+      <script type="text/javascript">
+         function cfunc(val) {
+            if(!(val.checked)){
+               document.getElementById("div1").innerHTML = "PER TRUCK";
+               document.getElementById('div1').style.padding = "8px 0 0 28px";
+            }
+            else{
+               document.getElementById("div1").innerHTML = "PER TONE";
+               document.getElementById('div1').style.padding = "8px 28px 0 0";
+            }
+         }
+      </script>
+   </head>
+   <body>
+      <div class="display">
+         <label class="toggle">
+            <input type="checkbox" name="name" value="" class="toggle_input" onchange="cfunc(this)" checked>
+            <div class="toggle_control" style= "text-align: center;"><p id = "div1" style="padding: 8px 28px 0 0; transition: 0.4s;">PER TONE</p></div>
+         </label>
+      </div>
+   </body>
+</html>
